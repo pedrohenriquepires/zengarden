@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese");
+body {
+  font-family: Roboto, sans-serif;
+  background: #FAFAFA;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header > h1 > span:first-child,
+.historia-digimon,
+.personagens h2:nth-child(2),
+.personagens ul:nth-child(4),
+.digiescolhidos,
+.content {
+  display: none;
+}
+
+header {
+  top: 40px;
+  overflow: hidden;
+  width: 100vw;
+  height: 100px;
+  position: relative;
+  background: #3369b1;
+  background-image: url(http://i.imgur.com/IDh6kFB.jpg);
+  background-position: 100% center;
+  background-repeat: no-repeat;
+  display: table-cell;
+  vertical-align: middle;
+  -webkit-animation: thunder 10s linear infinite;
+          animation: thunder 10s linear infinite;
+}
+
+header:before, header:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url(http://i.imgur.com/9ETN4RL.png);
+  left: 0;
+  top: 0;
+  will-change: transform;
+  -webkit-animation: goLeft 30s infinite linear;
+          animation: goLeft 30s infinite linear;
+  z-index: -1;
+}
+
+header:after {
+  left: 100%;
+}
+
+header > h1 {
+  display: none;
+}
+
+header * {
+  display: inline-block;
+}
+
+.autenticacao {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  z-index: 999;
+}
+
+.autenticacao a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 15px;
+  border-radius: 0 0 6px 6px;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+}
+
+.autenticacao a:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.logo:after {
+  content: "";
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg);
+  height: 100px;
+  width: 219px;
+  position: absolute;
+  top: -5px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 20px;
+  -webkit-animation: blur 10s linear infinite, init .7s ease-in-out forwards;
+          animation: blur 10s linear infinite, init .7s ease-in-out forwards;
+}
+
+nav:not(.autenticacao) {
+  position: relative;
+}
+
+nav:not(.autenticacao):after, nav:not(.autenticacao):before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2090px;
+  height: 66px;
+  background: url(http://i.imgur.com/3POiySm.png);
+  margin-top: 74px;
+  box-shadow: inset 0 -20px 10px -15px #fafafa;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-animation: goLeftFog 200s linear infinite;
+          animation: goLeftFog 200s linear infinite;
+  will-change: transform;
+}
+
+nav:not(.autenticacao):before {
+  left: 2090px;
+}
+
+nav:not(.autenticacao) {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #000;
+  height: 40px;
+  padding-left: 10px;
+  line-height: 35px;
+}
+
+nav:not(.autenticacao) a {
+  font-size: 14px;
+  padding: 9px 15px;
+  line-height: 40px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  box-sizing: border-box;
+}
+
+nav:not(.autenticacao) a:first-child {
+  color: #ffcb05;
+}
+
+nav:not(.autenticacao) a:hover {
+  color: #3369b1;
+}
+
+.whatever {
+  margin-top: 60px;
+}
+
+section {
+  padding: 0 30px;
+}
+
+h1, h2 {
+  color: #3369b1;
+  border-bottom: 2px solid #3369b1;
+  display: inline-block;
+  padding-right: 30px;
+  opacity: 0;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  -webkit-animation: init .7s .7s ease-in-out forwards;
+          animation: init .7s .7s ease-in-out forwards;
+}
+
+.historia-pokemon p {
+  color: #666;
+  margin-top: 0;
+  font-size: 14px;
+  width: 50%;
+  font-weight: 100;
+  text-indent: 30px;
+  line-height: 24px;
+  opacity: 0;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  -webkit-animation: init .7s .7s ease-in-out forwards;
+          animation: init .7s .7s ease-in-out forwards;
+}
+
+.historia-pokemon p span {
+  font-weight: bold;
+}
+
+.historia-pokemon p a {
+  color: #666;
+}
+
+.historia-pokemon {
+  position: relative;
+}
+
+.historia-pokemon:after {
+  content: "";
+  background: url(http://vignette3.wikia.nocookie.net/ultimate-pokemon-fanon/images/d/d9/The_baby_pokemon_by_tails19950-d5ty8li.png);
+  background-size: 100%;
+  width: 30%;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  right: 10%;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  background-repeat: no-repeat;
+  opacity: 0;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  -webkit-animation: initOpacity .7s 1.4s ease-in-out forwards;
+          animation: initOpacity .7s 1.4s ease-in-out forwards;
+}
+
+.personagens ul li {
+  list-style: none;
+}
+
+@-webkit-keyframes init {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes init {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes initOpacity {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: .3;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes initOpacity {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: .3;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes goLeft {
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@keyframes goLeft {
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes goLeftFog {
+  to {
+    -webkit-transform: translateX(-2090px);
+            transform: translateX(-2090px);
+  }
+}
+@keyframes goLeftFog {
+  to {
+    -webkit-transform: translateX(-2090px);
+            transform: translateX(-2090px);
+  }
+}
+@-webkit-keyframes blur {
+  73% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  75% {
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+  }
+  77% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+}
+@keyframes blur {
+  73% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  75% {
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+  }
+  77% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+}
+@-webkit-keyframes thunder {
+  0% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  49% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  50% {
+    -webkit-filter: brightness(2);
+            filter: brightness(2);
+  }
+  51% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  69% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  70% {
+    -webkit-filter: brightness(2);
+            filter: brightness(2);
+  }
+  71% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  100% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+}
+@keyframes thunder {
+  0% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  49% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  50% {
+    -webkit-filter: brightness(2);
+            filter: brightness(2);
+  }
+  51% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  69% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  70% {
+    -webkit-filter: brightness(2);
+            filter: brightness(2);
+  }
+  71% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+  100% {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+}
